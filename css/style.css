@@ -1,0 +1,97 @@
+:root {
+  --nav-top-gradient: #172774;
+  --nav-bottom-gradient: #ff0075;
+  --main-body-color: rgb(240, 240, 240);
+  --navBar-height: 60px;
+  --scrollbar-background-color: white;
+  --scrollbar-scroll-color: rgb(165, 165, 165);
+}
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: var(--main-body-color);
+}
+
+nav {
+  background-repeat: no-repeat;
+  background-image: linear-gradient(
+    180deg,
+    var(--nav-top-gradient),
+    var(--nav-top-gradient) 17%,
+    var(--nav-bottom-gradient) 17%
+  );
+  height: 60px;
+}
+
+.container {
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+}
+.title {
+  color: white;
+  font-size: 3rem;
+  font-weight: bold;
+  text-shadow: -3px 1px 0px var(--nav-top-gradient);
+}
+
+main {
+  height: calc(100vh - var(--navBar-height));
+  width: 100%;
+  padding: 20px 0px;
+}
+.notes-list {
+  height: 100%;
+}
+.note {
+  display: flex;
+  float: left;
+  flex-direction: column;
+  width: 245px;
+  margin: 3px;
+  height: 350px;
+}
+.note > textarea {
+  outline: none;
+  border: none;
+}
+.notes-title {
+  font-size: 18px;
+  flex: 1;
+  font-weight: bold;
+  border-radius: 10px 10px 0px 0px;
+}
+.notes-desp {
+  flex: 4;
+  border-radius: 0px 0px 10px 10px;
+  font-weight: 600;
+  color: rgb(36, 36, 36);
+}
+textarea {
+  padding: 10px;
+  resize: none;
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar-scroll-color)
+    var(--scrollbar-background-color);
+}
+
+.note:hover,
+.note:active {
+  border-radius: 10px 10px 10px 10px;
+  box-shadow: 0px 0px 5px rgb(36, 36, 36);
+}
+.add-btn {
+  font-size: 10rem;
+  margin: auto;
+  color: rgb(80, 80, 80);
+  cursor: pointer;
+}
+.add {
+  background: rgba(255, 255, 255, 0.3);
+  color: rgb(85, 85, 85, 0.5);
+}
